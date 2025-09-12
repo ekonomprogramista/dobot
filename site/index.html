@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>DOBOT: Programista</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">DOBOT: Programista</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">OGÓLNE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index2/" class="nav-link">EXTRA</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="index2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ogolne" class="nav-link">OGÓLNE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#aczenie-robota-ze-stanowiskiem-pracy" class="nav-link">ŁĄCZENIE ROBOTA ZE STANOWISKIEM PRACY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#laboratorium-dobotblock" class="nav-link">LABORATORIUM DOBOTBLOCK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#laboratorium-python" class="nav-link">LABORATORIUM PYTHON</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#laboratorium-rysunku-i-grafiki" class="nav-link">LABORATORIUM RYSUNKU I GRAFIKI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ogolne">OGÓLNE</h1>
+<p>Środowisko Dobot Lab jest konieczne do programowania robota Magician. To właśnie w nim piszemy kod, który zostanie wgrany do naszego robota. Aby zainstalować środowisko Dobot Lab, przejdź na stronę:  <a href="https://www.dobot-robots.com/service/download-center"><em>https://www.dobot-robots.com/service/download-center</em></a><em>,</em> a następnie pobierz dwa wymagane instalatory: <strong>DobotLab Win Local</strong> oraz <strong>DobotLink Win Local</strong>.</p>
+<p><strong>Na dzień pisania dokumentacji zalecana wersja: DobotLab V2.3.4, DobotLink V6.7.4</strong></p>
+<p><strong>Uwaga!</strong> Do instalacji wymagane są uprawnienia administratorskie.</p>
+<p><strong>Uwaga!</strong> Przy instalowaniu na komputer aplikacji DobotLink mogą wystąpić błędy, które skutkują tym, że wymagany sterownik nie zostanie poprawnie pobrany. Zaobserwować można to wchodząc w menedżer urządzeń – podłączony robot powinien znajdować się w swojej własnej, nowej kategorii w liście. Jeżeli wystąpi błąd instalacji sterownika, należy odinstalować aplikację DobotLink oraz przejść przez instalator ponownie.</p>
+<hr />
+<h1 id="aczenie-robota-ze-stanowiskiem-pracy">ŁĄCZENIE ROBOTA ZE STANOWISKIEM PRACY</h1>
+<p>Po zainstalowaniu na komputer potrzebnych aplikacji, i upewnieniu się, że działają one poprawnie, możemy przejść do łączenia się z naszym robotem</p>
+<ol>
+    <li><b>Przed podłączeniem robota upewnij się, że robot jest wyłączony</b>. Włącz go dopiero po uruchomieniu DobotLab – niektóre modele wykrywają się lepiej w tej kolejności</li>
+    <li>Ustaw ramię robota w odpowiedniej pozycji - tak aby późniejsze ruchy nie powodowały zacięć oraz aby ustalanie koordynat było łatwiejsze</li>
+    <li>
+    Uruchom DobotLab i wybierz dowolne laboratorium (np. DobotBlock lub Python
+        <ol style="list-style: upper-alpha;">
+            <li>Jeżeli wybrałeś laboratorium DobotBlock, kliknij w przycisk łączenia, a w otwartym oknie wybierz port do którego podłączony jest Magician</li>
+            <li>Jeżeli wybrałeś laboratorium Python, kliknij na listę rozwijalną po prawej stronie paska nawigacji, i wybierz z listy opcję <b>Magician</b></li>
+        </ol>
+    </li>
+</ol>
+
+<hr />
+<h1 id="laboratorium-dobotblock">LABORATORIUM DOBOTBLOCK</h1>
+<p>Sukces! Udało Ci się połączyć z robotem – możemy przejść do pracy. DobotLab posiada kilka rodzajów laboratoriów, każdy o innym przeznaczeniu ale o podobnej zasadzie działania.</p>
+<p>DobotBlock jest właśnie jednym z nich. Zapewne w szkole podstawowej robiłeś proste programy w Scratchu oparte o wizualne elementy (puzzle) w jakimś określonym porządku. Taki porządek można nazwać algorytmem, czyli listą kroków potrzebnych czynności do osiągnięcia jakiegoś celu. W DobotBlock wygląda to identycznie jak w Scratchu. Z listy kontrolek przeciągamy interesujące nas komponenty.</p>
+<p>Tak samo wygląda proces uruchomienia i zatrzymywania kodu – naciskamy ikonkę zielonej flagi lub czerwony sześciokąt.</p>
+<p><strong>Nie zapomnij o inicjalizacji robota dodając blok startowy!</strong></p>
+<h1 id="laboratorium-python">LABORATORIUM PYTHON</h1>
+<p>Laboratorium <strong>Python</strong> w DobotLab pozwala na bardziej precyzyjne i zaawansowane sterowanie robotem Magician. W przeciwieństwie do DobotBlock, nie używamy tutaj „puzzli”, tylko piszemy kod w języku programowania <strong>Python</strong>. To idealna okazja, aby wykorzystać poznane elementy programowania w praktyce!</p>
+<p><strong>Nie musisz znać wszystkich funkcji na pamięć!</strong> W laboratorium Python w DobotLab dostępny jest <strong>przybornik z funkcjami</strong>, który znajduje się po lewej stronie edytora. Wystarczy kliknąć wybraną funkcję z listy – w miejscu kursora w panelu tekstowym pojawi się jej składnia. Dzięki temu możesz łatwo korzystać z dostępnych poleceń bez przeszukiwania dokumentacji zewnętrznej.</p>
+<p>Przykładowy program:</p>
+<pre><code class="language-python">from DobotEDU import *
+
+# Ruch ramienia do pozycji startowej (ruch punkt-do-punktu)
+magician.ptp(mode=0, x=250, y=0, z=50, r=0)
+
+# Włączenie przyssawki
+magician.suction_cup(enable_ctrl=True, enable=True)
+
+# Ruch do pozycji nad obiektem
+magician.ptp(mode=0, x=200, y=0, z=0, r=0)
+
+# Powrót do pozycji początkowej
+magician.ptp(mode=0, x=250, y=0, z=50, r=0)
+
+# Wyłączenie przyssawki
+magician.suction_cup(enable_ctrl=True, enable=False)
+
+</code></pre>
+<h1 id="laboratorium-rysunku-i-grafiki">LABORATORIUM RYSUNKU I GRAFIKI</h1>
+<p>Laboratorium rysunku pozwala na konwersję obrazów lub tekstu na trajektorie ruchu robota, tak aby mógł je narysować na powierzchni za pomocą uchwytu z długopisem lub pisakiem.</p>
+<p>To doskonałe środowisko dla początkujących – nie wymaga umiejętności programowania. Rysunki generowane są automatycznie na podstawie wgranych grafik lub wpisanego tekstu.</p>
+<p>Jak korzystać z laboratorium?</p>
+<ol>
+    <li>
+        Wybierz opcję:
+        <ul>
+            <li>Importuj obraz używając przycisku <b>Otwórz</b>. (<b>Uwaga!</b> Przy wybraniu grafiki o innym formacie niż <i>.svg</i> konieczna będzie konwersja, co może skutkować gorszym efektem końcowym)</li>
+            <li>Wpisz tekst w polu tekstowym i kliknij przycisk <b>Dodaj</b></li>
+        </ul>
+    </li>
+    <li>
+        Ustaw upragnione parametry grafiki, m.in:
+        <ul>
+            <li>Rozmiar</li>
+            <li>Pozycja na podglądzie</li>
+            <li>Styl tekstu</li>
+        </ul>
+    </li>
+</ol>
+
+<p>Wskazówki przed rysowaniem:</p>
+<ul>
+    <li>Używaj obrazów o wysokim kontraście – najlepiej czarno-białych.</li>
+    <li>Robot rysuje tylko ścieżki – nie "drukuje" kolorów.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-09-12 08:04:25.942233+00:00
+-->
