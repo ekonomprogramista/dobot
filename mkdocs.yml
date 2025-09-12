@@ -1,1 +1,4 @@
 site_name: "DOBOT: Programista"
+site_url: https://ekonomprogramista.github.io/dobot/
+theme:
+  name: material
