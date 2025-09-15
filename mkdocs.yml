@@ -1,4 +1,39 @@
 site_name: "DOBOT: Programista"
 site_url: https://ekonomprogramista.github.io/dobot/
+
+repo_url: https://github.com/ekonomprogramista/dobot
+repo_name: ekonomprogramista/dobot
+
+nav:
+  - PIERWSZE KROKI: index.md
+  - DOBOT BLOCK: dobotblock.md
+  - DOBOT PYTHON: dobotpython.md
+  - DOBOT GRAFIKA: dobotgraphics.md
 theme:
   name: material
+  logo: img/ekonom.png
+  favicon: img/favicon.png
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Przełącz na jasny tryb
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Przełącz na ciemny tryb
+  features:
+    - header.repo
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - attr_list
