@@ -5,7 +5,9 @@ repo_url: https://github.com/ekonomprogramista/dobot
 repo_name: ekonomprogramista/dobot
 
 nav:
-  - PIERWSZE KROKI: index.md
+  - STRONA GŁÓWNA: index.md
+  - BIBLIOTEKA PYDOBOT: pydobot.md
+  - PIERWSZE KROKI DOBOTLAB: dobotlab.md
   - DOBOT BLOCK: dobotblock.md
   - DOBOT PYTHON: dobotpython.md
   - DOBOT GRAFIKA: dobotgraphics.md
