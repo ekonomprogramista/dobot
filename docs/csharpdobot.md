@@ -16,7 +16,7 @@ Do rozpoczęcia pracy, potrzebne będzie nam IDE (zalecamy Vistual Studio) i ste
 
 <ol>
     <li>Stwórz nowy projekt - Aplikacja Konsoli (.NET 7.0)</li>
-    <li>W zakładce Kompilowanie > Menedżer konfiguracji w polu **Aktywne platformy rozwiązania** kliknij <Nowy...>, następnie wybierz platformę x86 i kopiuj ustawienia z Any CPU</li>
+    <li>W zakładce Kompilowanie > Menedżer konfiguracji w polu <b>Aktywne platformy rozwiązania</b> kliknij <Nowy...>, następnie wybierz platformę x86 i kopiuj ustawienia z Any CPU</li>
     <li>W polu Konteksty projektu upewnij się że otwarty projekt ma wybraną platformę x86</li>
     <li>Dodaj folder z klasami do obsługi robota</li>
     <li>Upewnij się że w folderze bin/x86/Debug/net7.0 masz wrzucone wszystkie pliki .dll</li>
