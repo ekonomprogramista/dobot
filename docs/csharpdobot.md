@@ -12,7 +12,8 @@ Do rozpoczęcia pracy, potrzebne będzie nam IDE (zalecamy Vistual Studio) i ste
 
 !!! info "Adresy do strony"
     Vistual Studio 2022 [_https://visualstudio.microsoft.com/pl/_](https://visualstudio.microsoft.com/pl/)<br>
-    Sterownik CP210x: [_https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads_](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+    Sterownik CP210x: [_https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads_](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)<br>
+    Potrzebne pliki [_https://github.com/ekonomprogramista/dobot/blob/main/csharp_files.zip_](https://github.com/ekonomprogramista/dobot/blob/main/csharp_files.zip)
 
 <ol>
     <li>Stwórz nowy projekt - Aplikacja Konsoli (.NET 7.0)</li>
