@@ -7,6 +7,7 @@ repo_name: ekonomprogramista/dobot
 nav:
   - STRONA GŁÓWNA: index.md
   - BIBLIOTEKA PYDOBOT: pydobot.md
+  - C# I DOBOT: csharpdobot.md
   - PIERWSZE KROKI DOBOTLAB: dobotlab.md
   - DOBOT BLOCK: dobotblock.md
   - DOBOT PYTHON: dobotpython.md
