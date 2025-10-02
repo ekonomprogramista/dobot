@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://ekonomprogramista.github.io/dobot/csharpdobot/">
+        <link rel="canonical" href="https://ekonomprogramista.github.io/dobot/handtracking/">
       
       
-        <link rel="prev" href="../pydobot/">
+        <link rel="prev" href="../dobotgraphics/">
       
-      
-        <link rel="next" href="../dobotlab/">
       
       
       <link rel="icon" href="../img/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>C# I DOBOT - EKONOM: Programista</title>
+        <title>DOBOT I GESTYKULACJA - EKONOM: Programista</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c-i-dobot" class="md-skip">
+        <a href="#dobot-i-gestykulacja" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C# I DOBOT
+              DOBOT I GESTYKULACJA
             
           </span>
         </div>
@@ -295,19 +293,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../csharpdobot/" class="md-nav__link">
         
   
   
@@ -318,7 +307,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -415,10 +403,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../handtracking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -429,6 +426,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -470,130 +468,39 @@
   
 
 
-<h1 id="c-i-dobot">C# I DOBOT</h1>
-<p>C# to jeden z popularniejszych języków programowania, który jest szeroko stosowany w aplikacjach desktopowych, webowych oraz w środowiskach automatyki i robotyki. Dzięki bibliotekom i interfejsom API, C# może być używany do programowania robotów, takich jak Dobot.</p>
-<p>Dzięki SDK (Software Development Kit) udostępnianemu przez producenta robota, można z łatwością napisać aplikację do kontrolowania robota w C#. W naszej dokumentacji używamy klasy <code>Dobot</code></p>
+<h1 id="dobot-i-gestykulacja">DOBOT I GESTYKULACJA</h1>
+<p>Sterowanie gestami dłoni to nowoczesne podejście do kontroli ruchów robotów, które można zrealizować w całości z poziomu języka Python. Dzięki wykorzystaniu zwykłej kamerki internetowej oraz bibliotek do analizy obrazu, możliwe jest rozpoznawanie położenia dłoni i przekładanie go na konkretne polecenia ruchu robota.</p>
+<p>Python pełni tutaj rolę łącznika pomiędzy systemem rozpoznawania gestów a robotem, umożliwiając intuicyjne i naturalne sterowanie bez konieczności stosowania dodatkowych kontrolerów.</p>
+<ul>
+    <li>Python oferuje bogaty ekosystem bibliotek, które ułatwiają wykrywanie gestów i ich mapowanie na komendy sterujące.</li> 
+    <li>Ruchy dłoni w naturalny sposób przekładają się na działania robota.</li> 
+    <li>Możliwość dopasowania gestów do własnych potrzeb i przypisania im różnych funkcji.</li> 
+    <li>Rozwiązanie można połączyć z różnymi typami robotów, niezależnie od platformy sprzętowej.</li> 
+</ul>
+
 <hr />
 <h1 id="jak-zaczac">JAK ZACZĄĆ?</h1>
-<p>Do rozpoczęcia pracy, potrzebne będzie nam IDE (zalecamy Vistual Studio) i sterownik do portu wirtualnego.</p>
-<div class="admonition info">
-<p class="admonition-title">Adresy do strony</p>
-<p>Vistual Studio 2022 <a href="https://visualstudio.microsoft.com/pl/"><em>https://visualstudio.microsoft.com/pl/</em></a><br>
-Sterownik CP210x: <a href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads"><em>https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads</em></a><br>
-Potrzebne pliki <a href="https://github.com/ekonomprogramista/dobot/blob/main/csharp_files.zip"><em>https://github.com/ekonomprogramista/dobot/blob/main/csharp_files.zip</em></a></p>
-</div>
+<p>Aby rozpocząć przygodę ze sterowaniem robota za pomocą gestów dłoni w Pythonie, wystarczy zwykła kamerka internetowa i kilka popularnych bibliotek. Pierwszym krokiem jest instalacja narzędzi do przetwarzania obrazu, które umożliwiają wykrywanie dłoni i śledzenie jej ruchów. W naszej dokumentacji użyjemy bibioletki <strong>Mediapipe</strong>, <strong>OpenCV</strong> oraz <strong>pyDobot</strong>, który opisaliśmy już na naszej stronie <a href="https://ekonomprogramista.github.io/dobot/pydobot/">tutaj</a>.</p>
 <ol>
-    <li>Stwórz nowy projekt - Aplikacja Konsoli (.NET 7.0)</li>
-    <li>W zakładce Kompilowanie > Menedżer konfiguracji w polu <b>Aktywne platformy rozwiązania</b> kliknij <Nowy...>, następnie wybierz platformę x86 i kopiuj ustawienia z Any CPU</li>
-    <li>W polu Konteksty projektu upewnij się że otwarty projekt ma wybraną platformę x86</li>
-    <li>Dodaj folder z klasami do obsługi robota</li>
-    <li>Upewnij się że w folderze bin/x86/Debug/net7.0 masz wrzucone wszystkie pliki .dll</li>
-    <li>Zainstaluj wcześniej wspomniany sterownik</li>
+    <li>
+    Otwórz Terminal i wprowadź następującą komendę instalacyjną
+    <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span> <span class="n">mediapipe</span>
+</code></pre></div>
+    </li>
     <li>Podłącz Dobota do komputera dołączonym do zestawu kablem USB</li>
     <li>Ustaw ramię robota w odpowiedniej pozycji - tak aby późniejsze ruchy nie powodowały zacięć oraz aby ustalanie koordynat było łatwiejsze</li>
     <li>Włącz robota, zaczekaj aż dioda na jego podstawie zmieni kolor na zielony</li>
-    <li>Używając Menedżera urządzeń, ustal jakiego portu używa Dobot (COM<liczba>)</li>
     <li>Zacznij programować. Aby przekazać kod do Dobota, postępuj w ten sam sposób jak przy uruchamianiu normalnego kodu konsolowego</li>
 </ol>
 
 <div class="admonition warning">
 <p class="admonition-title">Uwaga!</p>
-<p>Uważaj! Przed rozpoczęciem prac, zmień przestrzeń nazw (namespace) wszystkich plików <em>.cs</em> w folderze CPlusDLL do obsługi DLL. W przeciwnym wypadku nie nawiążesz połączenia z robotem!</p>
+<p>Biblioteka <strong>Mediapipe</strong> nie jest dostępna na najnowszą wersję Pythona (3.13), zalecamy używanie wersji 3.11, którą możesz pobrać <a href="https://www.python.org/downloads/release/python-3110/">tutaj</a>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Program eksperymentalny</p>
-<p>Praca z Dobotem używając C# jest jeszcze w fazie testowania, pewne funkcje mogą nie działać tak jak powinny, a w dokumentacji mogą być pomyłki</p>
+<div class="admonition warning">
+<p class="admonition-title">Uwaga!</p>
+<p>Przy instalacji <strong>Mediapipe</strong> i <strong>OpenCV</strong> mogą wystąpić błędy kompatybilności wersji.</p>
 </div>
-<hr />
-<h1 id="kluczowe-metody">KLUCZOWE METODY</h1>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Tworzy nową instancję obiektu Dobot, łącząc się z urządzeniem za pomocą podanego portu i prędkości transmisji</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;param name=&quot;port&quot;&gt;Port, do którego urządzenie jest podłączone (np. &quot;COM1&quot;).&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;baudRate&quot;&gt;Prędkość transmisji (np. 9600, 115200).&lt;/param&gt;</span>
-<span class="k">new</span><span class="w"> </span><span class="nf">Dobot</span><span class="p">(</span><span class="o">*</span><span class="kt">string</span><span class="w"> </span><span class="n">port</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kt">int</span><span class="w"> </span><span class="n">baudRate</span><span class="o">*</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Sprawdza czy udało się nawiązać połączenie</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;returns&gt;True, jeśli połączenie zostało nawiązane, false w przeciwnym razie.&lt;/returns&gt;</span>
-<span class="p">.</span><span class="n">Connect</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Ustawia parametry początkowe robota (konieczne do działania)</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="p">.</span><span class="n">SetParams</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Sprawdza i wypisuje alarmy</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="p">.</span><span class="n">AlarmTest</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Czyści aktywne alarmy</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="p">.</span><span class="n">ClearAlarms</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Zwraca pozycję ramienia</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;returns&gt;Enum Pose, który zawiera koordynaty&lt;/returns&gt;</span>
-<span class="p">.</span><span class="n">GetPose</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Ustala prędkość i przyspieszenie dla ruchu PTP (Point to Point)</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;param name=&quot;velocity&quot;&gt;Prędkość&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;acceleration&quot;&gt;Przyspieszenie&lt;/param&gt;</span>
-<span class="p">.</span><span class="n">SetPTPSpeed</span><span class="p">(</span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">velocity</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">acceleration</span><span class="o">*</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Dodaje do kolejki ruch PTP (Point to Point) do podanych współrzędnych</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;param name=&quot;style&quot;&gt;Styl ruchu (np. 0 - szybki, 1 - dokładny itp.)&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;x&quot;&gt;Współrzędna X docelowego punktu&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;y&quot;&gt;Współrzędna Y docelowego punktu&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;z&quot;&gt;Współrzędna Z docelowego punktu&lt;/param&gt;</span>
-<span class="c1">/// &lt;param name=&quot;r&quot;&gt;Rotacja&lt;/param&gt;</span>
-<span class="p">.</span><span class="n">PTP</span><span class="p">(</span><span class="o">*</span><span class="kt">byte</span><span class="w"> </span><span class="n">style</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="kt">float</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// Włącza lub wyłącza przyssawkę.</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;param name=&quot;enable&quot;&gt;Jeśli wartość to true, przyssawka zostanie włączona. Jeśli false, przyssawka zostanie wyłączona&lt;/param&gt;</span>
-<span class="p">.</span><span class="n">SetSuctionCup</span><span class="p">(</span><span class="o">*</span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">*</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// Włącza lub wyłącza chwytak.</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="c1">/// &lt;param name=&quot;enable&quot;&gt;Jeśli wartość to true, chwytak zostanie włączony. Jeśli false, chwytak zostanie wyłączony&lt;/param&gt;</span>
-<span class="p">.</span><span class="n">SetGripper</span><span class="p">(</span><span class="o">*</span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">*</span><span class="p">)</span>
-</code></pre></div>
-<hr />
-<h1 id="przykadowy-program">PRZYKŁADOWY PROGRAM</h1>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Dobot</span><span class="w"> </span><span class="n">robot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dobot</span><span class="p">(</span><span class="s">&quot;COM4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">115200</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">robot</span><span class="p">.</span><span class="n">Connect</span><span class="p">())</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Nie udało się połączyć z Dobotem.&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="k">return</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">SetParams</span><span class="p">();</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">SetPTPSpeed</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">ClearAlarms</span><span class="p">();</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">AlarmTest</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">PTP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">SetSuctionCup</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">PTP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">PTP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
-<span class="w">        </span><span class="n">robot</span><span class="p">.</span><span class="n">SetSuctionCup</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 
 
 
