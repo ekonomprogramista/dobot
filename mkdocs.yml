@@ -1,4 +1,4 @@
-site_name: "DOBOT: Programista"
+site_name: "EKONOM: Programista"
 site_url: https://ekonomprogramista.github.io/dobot/
 
 repo_url: https://github.com/ekonomprogramista/dobot
@@ -12,6 +12,7 @@ nav:
   - DOBOT BLOCK: dobotblock.md
   - DOBOT PYTHON: dobotpython.md
   - DOBOT GRAFIKA: dobotgraphics.md
+  - DOBOT I GESTYKULACJA: handtracking.md
 theme:
   name: material
   logo: img/ekonom.png
